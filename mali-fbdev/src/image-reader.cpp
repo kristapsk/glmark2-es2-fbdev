@@ -119,7 +119,7 @@ PNGReader::init(const std::string& filename)
 
     Log::debug("Reading PNG file %s\n", filename.c_str());
 
-    const std::auto_ptr<std::istream> is_ptr(Util::get_resource(filename));
+    const std::uniue_ptr<std::istream> is_ptr(Util::get_resource(filename));
     if (!(*is_ptr)) {
         Log::error("Cannot open file %s!\n", filename.c_str());
         return false;
